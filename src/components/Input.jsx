@@ -1,7 +1,6 @@
 import useInputValidate from '@/hooks/useInputValidate';
 import { RenderIf } from './RenderIf';
 import PropTypes from 'prop-types';
-
 export default function Input({
   id,
   name,

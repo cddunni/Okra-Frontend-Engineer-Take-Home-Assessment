@@ -2,7 +2,8 @@ import LinkedIn from "@/assets/icons/linked-in.svg?react";
 import Twitter from "@/assets/icons/twitter.svg?react";
 import Youtube from "@/assets/icons/youtube.svg?react";
 import Slack from "@/assets/icons/slack.svg?react";
-import React from "react";
+import BookOpen from '@/assets/icons/book-open.svg?react';
+import Book from '@/assets/icons/book.svg?react';
 
 export const howYouFoundUs = [
     {
@@ -46,3 +47,23 @@ export const contacts = [
     },
 ]
 export const legal = ['Terms', 'Privacy']
+export const resources = [
+  {
+    title: 'See Brinte docs',
+    description: 'Brinte docs',
+    icon: <BookOpen/>,
+    variant: 'bg-purple_400 row-span-2 hover:bg-purple_500'
+  },
+    {
+    title: 'Join Slack community',
+    description: 'Brinte community',
+    icon: <Slack/>,
+    variant: 'bg-orange_400 hover:bg-orange_500'
+  },
+    {
+    title: 'Go to help center',
+    description: 'Brinte support',
+    icon: <Book/>,
+    variant: 'bg-on_primary hover:bg-tertiary_dim'
+  }
+]
