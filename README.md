@@ -45,12 +45,18 @@ npm run dev
 
 # Screenshots
 - Mobile Menu View
+
 ![Mobile Menu View](./src/assets/images/mobile-menu.png)
+
 - Desktop View
+
 ![Desktop View](./src/assets/images/desktop-view.png)
 - Ipad View
+
 ![Ipad View](./src/assets/images/ipad-view.png)
+
 - Mobile view
+
 ![Desktop View](./src/assets/images/mobile-view.png)
 
 
