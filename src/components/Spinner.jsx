@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
 const Loader = ({containerVariant}) => {
   return (
@@ -31,3 +31,6 @@ const Loader = ({containerVariant}) => {
 }
 
 export default Loader
+Loader.propTypes = {
+  containerVariant: PropTypes.string
+};

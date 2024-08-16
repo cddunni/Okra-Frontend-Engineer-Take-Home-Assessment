@@ -1,6 +1,6 @@
 import useInputValidate from '@/hooks/useInputValidate';
-import React from 'react';
 import { RenderIf } from './RenderIf';
+import PropTypes from 'prop-types';
 
 export default function Input({
   id,
@@ -11,7 +11,6 @@ export default function Input({
   disabled = false,
   onChange,
   type,
-  max,
   variant,
   showError = false,
 }) {
@@ -28,7 +27,6 @@ export default function Input({
           type={type || 'text' }
           placeholder={placeholder || ''}
           value={value}
-          max={max}
           onBlur={() => validate({ name:label, value })}
           data-testid={`test-${id}`}
           disabled={disabled}
@@ -52,3 +50,16 @@ export default function Input({
     </>
   );
 }
+
+Input.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  label: PropTypes.string,
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func,
+  type: PropTypes.string,
+  variant: PropTypes.string,
+  showError: PropTypes.bool
+};

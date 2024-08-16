@@ -1,4 +1,3 @@
-import React from 'react'
 import SuccessIllustration from '@/assets/svg/success.svg?react';
 
 const Success = () => {

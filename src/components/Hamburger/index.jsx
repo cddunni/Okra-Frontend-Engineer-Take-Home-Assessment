@@ -1,5 +1,5 @@
-import React from 'react';
 import './hamburger.css';
+import PropTypes from 'prop-types';
 
 const Hamburger = ({ active, className }) => (
   <svg
@@ -32,3 +32,7 @@ const Hamburger = ({ active, className }) => (
 );
 
 export default Hamburger;
+Hamburger.propTypes = {
+  active: PropTypes.bool,
+  className: PropTypes.string,
+};

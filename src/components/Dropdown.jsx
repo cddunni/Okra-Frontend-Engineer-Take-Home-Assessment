@@ -1,8 +1,10 @@
-import React, { useEffect, useState, useRef, useMemo } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import ChevronDown from "@/assets/icons/chevron-down.svg?react";
 import { motion } from 'framer-motion';
 import useInputValidate from '@/hooks/useInputValidate';
 import { RenderIf } from './RenderIf';
+import PropTypes from 'prop-types';
+import  Spinner from './Spinner';
 
 export default function Dropdown({
   label,
@@ -19,7 +21,6 @@ export default function Dropdown({
   height,
   optionContainerVariant,
   selected,
-  children,
   readOnly = true,
   showError = false,
   placeholder,
@@ -99,10 +100,9 @@ export default function Dropdown({
                     <p className='text-sm capitalize'>{option?.name}</p>
                   </div>
                 ))}
-                {children}
               </div>
               {loading && !options?.length && <Spinner />}
-              {!loading && !options?.length && !children && <p className="text-center text-neutral_600 py-[20px] font-pptelegraph_r">No data found</p>}
+              {!loading && !options?.length && <p className="text-center text-neutral_600 py-[20px] font-pptelegraph_r">No data found</p>}
             </div>
           </motion.div>
         )}
@@ -111,3 +111,22 @@ export default function Dropdown({
   );
 }
 
+Dropdown.propTypes = {
+  label: PropTypes.string,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  options: PropTypes.array,
+  onSelect: PropTypes.func,
+  loading: PropTypes.bool,
+  optionVariant: PropTypes.string,
+  variant: PropTypes.string,
+  disabled: PropTypes.bool,
+  containerVariant: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  optionContainerVariant: PropTypes.string,
+  selected: PropTypes.string,
+  readOnly:PropTypes.bool,
+  showError: PropTypes.bool,
+  placeholder: PropTypes.string
+};

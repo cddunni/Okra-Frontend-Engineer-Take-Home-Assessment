@@ -1,6 +1,6 @@
-import React from "react";
 import useInputValidate from '@/hooks/useInputValidate';
 import { RenderIf } from "./RenderIf";
+import PropTypes from 'prop-types';
 
 export default function TextArea({
   id,
@@ -51,3 +51,19 @@ export default function TextArea({
     </div>
   );
 }
+TextArea.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  showError:PropTypes.bool,
+  variant: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  readOnly: PropTypes.bool,
+  rows: PropTypes.number,
+  helperText: PropTypes.string,
+  maxLength: PropTypes.string,
+  disabled: PropTypes.bool,
+  showMaxLength: PropTypes.bool,
+};
+

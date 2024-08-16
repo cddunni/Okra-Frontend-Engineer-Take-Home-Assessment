@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import BrinteLogo from '@/assets/svg/brinte.svg?react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';

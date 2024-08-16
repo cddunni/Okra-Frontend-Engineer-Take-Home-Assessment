@@ -1,9 +1,9 @@
-import React from "react"
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { navLinks } from "@/constants/contact.jsx";
 import Button from "./button/Button";
 import { RenderIf } from "./RenderIf";
+import PropTypes from 'prop-types';
 
 export default function MobileMenu({ showSlider, setShowSlider }) {
 
@@ -40,3 +40,7 @@ export default function MobileMenu({ showSlider, setShowSlider }) {
     </AnimatePresence>
   )
 }
+MobileMenu.propTypes = {
+  showSlider: PropTypes.bool,
+  setShowSlider: PropTypes.func
+};

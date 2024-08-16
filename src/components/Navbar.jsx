@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import BrinteLogo from "@/assets/svg/brinte.svg?react";
 import Beta from "@/assets/svg/beta.svg?react";
 import { Link } from "react-router-dom";

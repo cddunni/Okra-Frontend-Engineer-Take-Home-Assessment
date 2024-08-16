@@ -1,6 +1,6 @@
-import React from 'react'
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg?react";
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 const Card = ({ icon, variant, title, description }) => {
 
@@ -46,4 +46,10 @@ const Card = ({ icon, variant, title, description }) => {
 };
 
 export default Card;
+Card.propTypes = {
+  icon: PropTypes.element,
+  variant: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
 

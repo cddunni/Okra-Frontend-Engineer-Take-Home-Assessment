@@ -1,6 +1,6 @@
-import React from "react"
 import "./button.css"
 import Spinner from "../Spinner";
+import PropTypes from 'prop-types';
 
 const Button = ({
   btnText,
@@ -30,3 +30,12 @@ const Button = ({
 }
 
 export default Button;
+Button.propTypes = {
+  btnText: PropTypes.string,
+  onClick: PropTypes.func,
+  theme: PropTypes.string,
+  disabled: PropTypes.bool,
+  type: PropTypes.string,
+  loading: PropTypes.bool,
+  variant: PropTypes.string
+};

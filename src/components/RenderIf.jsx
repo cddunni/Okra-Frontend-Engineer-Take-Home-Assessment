@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export const RenderIf = ({condition, children}) => {
 
@@ -7,3 +8,7 @@ export const RenderIf = ({condition, children}) => {
 
   return <>{children}</>
 }
+RenderIf.propTypes = {
+  condition: PropTypes.bool,
+  children: PropTypes.element,
+};

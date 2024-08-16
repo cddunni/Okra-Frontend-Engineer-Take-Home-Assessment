@@ -1,4 +1,3 @@
-import React from "react";
 import BrinteIcon from "@/assets/icons/brinte.svg?react";
 import CircleAlert from "@/assets/icons/circle-alert.svg?react";
 import { navLinks, contacts, legal } from "@/constants/contact.jsx";
