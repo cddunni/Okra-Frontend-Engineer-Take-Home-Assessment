@@ -44,9 +44,6 @@ npm run dev
 - Navbar (interactions)
 
 # Screenshots
-- Mobile Menu View
-
-![Mobile Menu View](./src/assets/images/mobile-menu.png)
 
 - Desktop View
 
@@ -59,6 +56,9 @@ npm run dev
 
 ![Desktop View](./src/assets/images/mobile-view.png)
 
+- Mobile Menu View
+
+![Mobile Menu View](./src/assets/images/mobile-menu.png)
 
 # Project Link
 [okra-takehome-oluwatimileyin-akinpelu](https://okra-takehome-oluwatimileyin-akinpelu.netlify.app/)
