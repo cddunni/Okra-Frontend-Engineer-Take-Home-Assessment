@@ -11,7 +11,7 @@ Table of Contents
 # About the Project
 This is a Takehome assessment for Frontend Engineer role at Okra.ng.
 # Tasks
-1. **Objective**: Create a single web page based on the [provided design assets] (https://www.figma.com/design/266gI2IHh8ZH00TgEdUnk8/Design-Test?node-id=1-4&t=ifWinaObqbwEAsPr-0).
+1. **Objective**: Create a single web page based on the [provided design assets](https://www.figma.com/design/266gI2IHh8ZH00TgEdUnk8/Design-Test?node-id=1-4&t=ifWinaObqbwEAsPr-0).
 2. **Instructions**:
     - The design assets are on a different page (link or details will be provided).
     - While React is suggested, you can use any framework or library based on React.
@@ -35,7 +35,7 @@ npm install
 - Start the development server
 npm run dev
 
-# Features/Component Breakdown
+# Features/Components Breakdown
 - Button (enabled, hovered, pressed, loading, focused and disabled state)
 - Input (enabled, hovered, pressed, focused, filled, error and disabled state)
 - Dropdown (enabled, hovered, pressed, selected, focused, filled, error and disabled state)
@@ -45,14 +45,14 @@ npm run dev
 
 # Screenshots
 - Mobile Menu View
-![Mobile Menu View](assets/images/mobile-menu.png)
+![Mobile Menu View](./src/assets/images/mobile-menu.png)
 - Desktop View
-![Desktop View](assets/images/desktop-view.png)
+![Desktop View](./src/assets/images/desktop-view.png)
 - Ipad View
-![Ipad View](assets/images/ipad-view.png)
+![Ipad View](./src/assets/images/ipad-view.png)
 - Mobile view
-![Desktop View](assets/images/mobile-view.png)
+![Desktop View](./src/assets/images/mobile-view.png)
 
 
 # Project Link
-[okra-takehome-oluwatimileyin-akinpelu] (https://okra-takehome-oluwatimileyin-akinpelu.netlify.app/)
+[okra-takehome-oluwatimileyin-akinpelu](https://okra-takehome-oluwatimileyin-akinpelu.netlify.app/)
