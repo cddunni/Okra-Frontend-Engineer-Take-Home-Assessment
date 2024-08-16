@@ -1,68 +1,84 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
+}
+body{
+  margin: 0;
+}
+@font-face {
+  font-family: 'pptelegraph_r';
+  src: local('pptelegraph-regular'), url('./assets/fonts/PPTelegraf-Regular.otf') format('opentype');
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'pptelegraph_ul';
+  src: local('pptelegraph-ultralight'), url('./assets/fonts/PPTelegraf-UltraLight.otf') format('opentype');
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'pptelegraph_ub';
+  src: local('pptelegraph-ultrabold'), url('./assets/fonts/PPTelegraf-UltraBold.otf') format('opentype');
+  font-display: swap; 
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* styles.css */
+.rotate {
+  animation: spin 1s linear infinite;
+  transform-origin: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.input-container>label,
+.input-container>input:not([value=""])~label
+{
+	position: absolute;
+	left: 16px;
+	font-size: 13px;
+	top: 18px;
+	transition: .2s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.input-container>input:focus~label,
+.input-container>input:not(:placeholder-shown)~label
+{
+	left: 16px;
+	top: 8px;
+	font-size: 10px;
+}
+
+.cc-input:active, 
+.cc-input:focus {
+    border: 1.5px solid #824FE7;
+    box-shadow: 0px 0px 0px 4px rgba(137, 87, 239, 0.2);
+    background-color: #FEFEFF;
+}
+.cc-input-error {
+    border: 1.5px solid #FF401E;
+    box-shadow: 0px 0px 0px 4px #FF401E3D;
+    background-color: #FEFEFF;
+}
+.cc-input:disabled {
+    background-color: #E6E6E7;
+}
+
+.stagger__in--3 {
+  position: relative;
+  animation: fade-in-from-top 1s 0.6s both cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: backwards;
 }
