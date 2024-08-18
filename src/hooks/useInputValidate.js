@@ -9,6 +9,10 @@ export default function useInputValidate() {
 
     const checkEmail = ({ value }) => {
         if (!REGEX_EMAIL.test(value)) {
+            if (!value?.length) {
+                setError(`Email is required`)
+                return false
+            }
             setError('Please enter a valid email');
             return false;
         }
