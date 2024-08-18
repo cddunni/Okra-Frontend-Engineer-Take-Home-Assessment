@@ -49,6 +49,8 @@ const ContactForm = ({setIsSuccessful}) => {
     }
   };
 
+  const btnDisabled = !formData.message || !formData.lastName || !formData.firstName || !formData.companyName || !formData.howYouFoundUs || !formData.websiteURL
+  
   return (
     <form type="form" method="POST">
       <div className="grid grid-cols-2 gap-4">
@@ -130,6 +132,7 @@ const ContactForm = ({setIsSuccessful}) => {
       <Button
         type="submit"
         theme="primary"
+        disabled={btnDisabled}
         btnText={loading ? "Sending message..." : "Contact sales"}
         loading={loading}
         onClick={handleSubmit}
