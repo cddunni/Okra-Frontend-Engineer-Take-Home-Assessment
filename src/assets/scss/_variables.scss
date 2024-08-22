@@ -1,0 +1,27 @@
+// colors
+$button-disabled: #C7C7E1;
+$on-primary: #FEFEFF;
+$primary: #202022;
+$primary-action: #824FE7;
+$primary-action-hover: #A277FF;
+$secondary: #5E5E60;
+$secondary-action: #F2F2F3;
+$neutral-hover: #303032;
+$subdued: #909092;
+$subdue: #E6E6E7;
+$label: #464649;
+$tertiary-highlight: #DADADB;
+$error: #FF401E;
+$purple-400: #D2BCFF;
+$purple-500: #BA9AFF;
+$orange-400: #FFB693;
+$orange-500: #FF8C51;
+$tertiary-dim: #E6E6E7;
+$overlay: #46464929;
+
+//breakpoints
+$breakpoints: (
+	'mobile': 320px,
+	'tablet': 768px,
+	'desktop': 1024px
+) !default;
