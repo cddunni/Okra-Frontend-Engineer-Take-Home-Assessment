@@ -1,0 +1,36 @@
+@import '../../assets/scss/base';
+
+.cc-textarea {
+    background-color: $secondary-action;
+    padding: 12px;
+    outline: none;
+    border-radius: 6px;
+    color: $primary;
+    border: none;
+    font-size: 13px;
+    width: 100%;
+
+    &-error {
+        border: 1.5px solid $error;
+        box-shadow: 0px 0px 0px 4px #FF401E3D;
+        background-color: $on-primary;
+    }
+    &::placeholder  {
+        color: $subdued;
+    }
+    &:hover::placeholder {
+        color: $secondary;
+    }
+    &:active, &:focus {
+        border: 1.5px solid $primary-action;
+        box-shadow: 0px 0px 0px 4px rgba(137, 87, 239, 0.2);
+        background-color: $on-primary;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: $subdue;
+    }
+}
+.text-secondary {
+    @include text-color($secondary);
+}
