@@ -1,0 +1,109 @@
+@import '../../assets/scss/base';
+
+.footer {
+    background-color: $overlay;
+    .contact {
+        background-image: url('/src/assets/svg/graphics.svg');
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding:  160px 24px 24px;
+        @include query('tablet', 'min') {
+            flex-direction: row;
+            padding: 240px 80px 32px;
+            @include space-y(0px)
+        }
+        @include query('desktop', 'min') {
+            padding-left: 309px;
+            padding-right: 309px;
+        }
+    }
+    .group {
+        @include query('mobile', 'min') {
+            @include grid-col(1, 32px);
+            margin-top: 24px;
+        }
+        @include query('tablet', 'min') {
+            @include grid-col(3, 32px)
+        }
+    }
+    .item {
+        @include query('tablet', 'min') {
+            min-width: 80px;
+        }
+        @include query('desktop', 'min') {
+            min-width: 139px;
+        }
+        .title {
+            color: $subdued;
+            font-size: 12px;
+        }
+        a {
+            color: $label;
+            font-size: 13px;
+            font-weight: 500;
+            &:hover {
+                color: $subdued;
+            }
+            .social-media {
+                display: flex;
+                align-items: center;
+                margin-top: 24px;
+                padding: 2px 0px;
+                @include space-x(8px)
+            }
+            .contact-type {
+                margin-top: 24px;
+                padding: 2px 0px;
+            }
+        }
+    }
+    .info {
+        border-top: 1px solid $tertiary-highlight;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        @include query('mobile', 'min') {
+            margin: 0 24px;
+            padding-top: 24px;
+        }
+        @include query('tablet', 'min') {
+            padding-top: 32px;
+            margin: 0 80px;
+        }
+        @include query('desktop', 'min') {
+            margin: 0 309px;
+        }
+        .status {
+            @include text-color($label)
+        }
+        .year {
+            @include text-color($secondary)
+
+        }
+    }
+    .logo-mark {
+        background-image: url('/src/assets/svg/word-mark.svg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        @include query('mobile', 'min') {
+            padding-left: 40px ;
+            padding-right: 40px;
+            padding-bottom: 128px;
+        }
+        @include query('tablet', 'min') {
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-bottom: 208px;
+        }
+        @include query('desktop', 'min') {
+            padding: 80px 309px 235px;
+        }
+    }
+}
+.space-x-2 {
+    @include space-x(8px)
+}
