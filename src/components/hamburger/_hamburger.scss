@@ -1,0 +1,42 @@
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill: none; /* Ensures the fill is empty as we're using stroke */
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+}
+
+.ham1 {
+  .top {
+    stroke-dasharray: 40 82;
+  }
+  .bottom {
+    stroke-dasharray: 40 82;
+  }
+}
+
+
+.ham1.active .top {
+  stroke-dasharray: 14 82;
+  stroke-dashoffset: -72px;
+}
+
+.ham1.active .bottom {
+  stroke-dasharray: 14 82;
+  stroke-dashoffset: -72px;
+}
