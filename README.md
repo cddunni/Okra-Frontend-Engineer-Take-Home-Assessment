@@ -18,9 +18,9 @@ This is a Takehome assessment for Frontend Engineer role at Okra.ng.
 
 # Technologies Used
 - React
-- Javascript
+- Typescript
 - Framer motion
-- TailwindCss
+- Scss
 - CSS
 # Installation
 - Clone the repository
