@@ -1,0 +1,98 @@
+/* src/index.scss */
+@import './assets/scss/fonts';
+@import './assets/scss/variables';
+@import './assets/scss/_base';
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+body , p {
+  margin: 0;
+}
+.app {
+  height: 100%;
+  width: 100%;
+}
+@font-face {
+  font-family: 'pptelegraph_r';
+  src: local('pptelegraph-regular'), url('./assets/fonts/PPTelegraf-Regular.otf') format('opentype');
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'pptelegraph_ul';
+  src: local('pptelegraph-ultralight'), url('./assets/fonts/PPTelegraf-UltraLight.otf') format('opentype');
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'pptelegraph_ub';
+  src: local('pptelegraph-ultrabold'), url('./assets/fonts/PPTelegraf-UltraBold.otf') format('opentype');
+  font-display: swap; 
+}
+
+/* styles.css */
+.rotate {
+  animation: spin 1s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.input-container {
+  position: relative;
+}
+.error {
+  color: $error;
+  font-size: 12px;
+  &:disabled {
+    color: $subdued;
+  }
+}
+.mt-2 {
+  margin-top: 8px
+}
+
+.input-container>label,
+.input-container>input:not([value=""])~label
+{
+	position: absolute;
+	left: 16px;
+	font-size: 13px;
+	top: 18px;
+	transition: .2s;
+}
+
+.input-container>input:focus~label,
+.input-container>input:not(:placeholder-shown)~label
+{
+	left: 16px;
+	top: 8px;
+	font-size: 10px;
+}
+
+
+.stagger__in--3 {
+  position: relative;
+  animation: fade-in-from-top 1s 0.6s both cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: backwards;
+}
+a {
+  text-decoration: none;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.hide_tap {
+  -webkit-tap-highlight-color: rgba(98, 80, 80, 0);
+}
