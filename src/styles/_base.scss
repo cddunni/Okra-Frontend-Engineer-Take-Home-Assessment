@@ -1,0 +1,126 @@
+@import './variables';
+
+/* Flexbox mixins */
+@mixin flex($direction: row, $justify: center, $align: '') {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+// space between
+@mixin space-l($space) {
+    & > *:not([hidden]) ~ *:not([hidden]) {
+      margin-left: $space;
+    }
+  }
+  
+@mixin space-t($space) {
+    & > *:not([hidden]) ~ *:not([hidden]) {
+      margin-top: $space;
+    }
+  }
+  
+
+/* Grid mixins */
+@mixin grid-col($columns: 1, $gap: 0) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+@mixin grid-row($rows: 1, $gap: 0) {
+    display: grid;
+    grid-template-rows: repeat($rows, 1fr);
+    gap: $gap;
+}
+
+@for $i from 1 through 12 {
+    .grid-cols-#{$i} {
+        @include grid-col($i);
+    }
+}
+
+@for $i from 1 through 12 {
+    .grid-rows-#{$i} {
+        @include grid-row($i);
+    }
+}
+
+.grid {
+    display: grid;
+}
+
+/* Color utilities */
+@mixin text-color($color) {
+    color: $color;
+}
+
+// Background Color utilities
+@mixin bg-color($color) {
+    background-color: $color;
+}
+
+/* Flexbox utilities */
+.flex {
+    @include flex;
+}
+.flex-row {
+    @include flex(row);
+}
+.flex-center {
+    display: flex;
+    align-items: center
+}
+.flex-col {
+    @include flex(column);
+}
+.justify-center {
+    @include flex(row, center);
+}
+.flex-row-center {
+    @include flex(row, center, center);
+}
+.flex-col-center {
+    @include flex(column, space-between, center);
+}
+.flex-col-between {
+    @include flex(column, center, center);
+}
+.flex-row-between {
+    @include flex(row, space-between, center);
+}
+.flex-col-between {
+    @include flex(column, space-between);
+}
+.center {
+    @include flex(row, center, center);
+}
+
+
+/* Padding mixin */
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    padding: $top $right $bottom $left;
+}
+  
+/* Padding mixin */
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    margin: $top $right $bottom $left;
+}
+
+// Breakpoints
+@mixin query($breakpoint, $type: max) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpoint: map-get($breakpoints, $breakpoint);
+	}
+
+	@media screen and (#{$type}-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@mixin overflow-x($type) {
+    overflow-x: $type;
+}
+
+@mixin overflow-y($type) {
+    overflow-y: $type;
+}

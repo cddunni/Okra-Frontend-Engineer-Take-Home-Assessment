@@ -1,7 +1,7 @@
 /* src/index.scss */
-@import './assets/scss/fonts';
-@import './assets/scss/variables';
-@import './assets/scss/_base';
+@import '@/styles/fonts';
+@import '@/styles/variables';
+@import '@/styles/_base';
 
 * {
   box-sizing: border-box;
