@@ -2,12 +2,12 @@ import React, { lazy } from 'react';
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 
 // Import Error Components
-import PageNotFound from '@/pages/PageNotFound';
-import SomethingWentWrong from '@/pages/SomethingWentWrong';
-import Layout from '@/components/layout/Layout';
+import PageNotFound from '@/pages/pageNotFound/PageNotFound';
+import SomethingWentWrong from '@/pages/somethingWentWrong/SomethingWentWrong';
+import {Layout} from '@/components';
 
 // Lazy loaded pages
-const Contact = lazy(() => import('@/pages/Contact'))
+const Contact = lazy(() => import('@/pages/contact/Contact'))
 
 const router = createBrowserRouter([
   {

@@ -1,0 +1,11 @@
+@import '@/styles/base';
+
+.name-row {
+    @include grid-col(2, 16px)
+}
+.mt-4 {
+    margin-top: 16px
+}
+.mb-2 {
+    margin-bottom: 8px
+}

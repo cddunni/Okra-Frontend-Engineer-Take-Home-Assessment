@@ -1,0 +1,60 @@
+@import '@/styles/base';
+@import '../input/input';
+
+.dropdown-container {
+    position: relative;
+    cursor: pointer;
+}
+.dropdown-arrow {
+    cursor: pointer;
+    padding: 0px 18.5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+.selected {
+    top: 6px;
+}
+.not-selected{
+    top: 0px;
+}
+.dropdown-options-container {
+    position: absolute;
+    left: -1px;
+    top: 100%;
+    margin-top: 8px;
+    width: 100%;
+    z-index: 20;
+    border-radius: 0.5rem;
+    border: 1px solid $tertiary-highlight;
+    padding: 4px;
+    background-color: $on-primary;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.08);
+}
+.option-container {
+    max-height: 216px;
+    overflow: auto;
+}
+.option-container-item {
+    color: $label;
+    padding: 12px 8px;
+    cursor: pointer;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    font-size: 14px;
+    text-transform: capitalize;
+    border-radius: 0.375rem;
+
+    &:hover {
+        background-color: $secondary-action;
+    }
+    &.active {
+        color: $primary;
+        background-color: $secondary-action;
+    }
+}
